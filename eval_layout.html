@@ -2,21 +2,146 @@
 <html lang="fr">
 	<style>
 
+
+			body
+			{display:flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			overflow: hidden;}
+			img
+			{width:100%;}
+			.images
+			{width: 100%;}
+			.header
+			{text-align: center;}
+
+			.tablette
+			{display:none;}
+			.desktopG
+			{display:none;}
+			.desktop
+			{display:none;}
+
+		@media (min-width:769px) and (max-width:970px)
+		{
+
+			img
+			{width:100%;
+			}
+			.images
+			{	width: 100%;
+				display:flex;
+
+				flex-wrap: wrap;
+				}
+			.images div
+			{width:49%;
+				margin:1px;
+			}
+			.header
+			{margin:0 auto;}
+			.telephone
+			{display:none;}
+			.tablette
+			{display:unset;}
+			.txtcenter
+			{text-align: center;}
+		}
+			@media (min-width:970px) and (max-width:1370px)
+			{
+
+				body
+				{
+					margin-left: 10%;
+					margin-right: 10%;
+				}
+				img
+				{width:100%;
+					}
+				.images
+				{	width: 100%;
+					display:flex;
+
+					flex-wrap: wrap;
+				}
+				.images div
+				{width:49%;
+					margin:3px;
+
+				}
+				.header
+				{margin:0 auto;}
+				.desktop
+				{display:unset;}
+				.telephone
+				{display:none;}
+				.txtcenter
+				{text-align: center;}
+			}
+
+			@media (min-width: 1370px)
+			{
+
+				body
+				{
+					margin-left: 15%;
+					margin-right: 15%;
+				}
+				img
+				{width:100%;
+				}
+				.images
+				{	width: 100%;
+					display:flex;
+					flex-direction: row;
+					flex-wrap: nowrap;
+				}
+				.images div
+				{
+					margin:3px;
+				}
+				.header
+				{margin:0 auto;}
+				.telephone
+				{display:none;}
+				.desktop
+				{display:none;}
+				.desktopG
+				{display:unset;}
+
+				.txtcenter
+				{text-align: center;}
+			}
+
 	</style>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Eval Layout</title>
-		<link rel="stylesheet" href="css/style.css">
+
 	</head>
 	<body>
-		<h1 class="txtcenter">Evaluation  Layout</h1>
+
+		<!--<h1 class="txtcenter">Evaluation  Layout</h1>
 		<h2 class="desktopG txtcenter">Vue Desktop > 1370px</h2>
 		<h2 class="desktop txtcenter">Vue Desktop</h2>
 		<h2 class="tablette txtcenter">Vue Tablette à 768px à 970px</h2>
 		<h2 class="telephone txtcenter">Vue Téléphone à 320px</h2>
+		-->
 
+		<div class="header">
+			<h1 class="txtcenter">Evaluation  Layout</h1>
+			<h2 class="telephone txtcenter">Vue Téléphone à 320px</h2>
+			<h2 class="tablette txtcenter">Vue Tablette à 768px à 970px</h2>
+			<h2 class="desktop txtcenter">Vue Desktop</h2>
+			<h2 class="desktopG txtcenter">Vue Desktop > 1370px</h2>
+		</div>
+		<div class="images">
+			<div><img src="img/mer.jpg"></div>
 
-
+			<div><img src="img/lac.jpg"></div>
+			<div><img src="img/montagne.jpg"></div>
+			<div><img src="img/foret.jpg"></div>
+		</div>
 	</body>
 </html>
